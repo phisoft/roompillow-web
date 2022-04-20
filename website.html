@@ -1,0 +1,66 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="keywords" content="Hostel Booking Software, Booking System Kota Kinabalu, Booking Reservation, Backpacker PMS, Channel Manager In Malaysia">
+    <title> Roompillow - PMS for Backpacker Hostels </title>
+	<link rel="shortcut icon" href="img/fav.ico">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+</head>
+<body>
+<section class="header">
+  <div class="container">
+  <div class="row menu">
+    <div class="four columns">
+      <a href="/"><img src="img/roompillow_white.png"> </a>
+    </div>
+    <div class="eight columns rp-menu">
+      <ul>
+      </ul>
+    </div>
+  </div>
+</div></section>
+<section class="container">
+  <br><br>
+  <h5> Setup Website Booking Widget </h5>
+  The website widget booking engine integration required you to copy paste the
+  following code to your website main html page. <p></p>
+  <pre>
+  <code class="html">
+    &lt;form method="GET" action="<span id="url2"></span>"&gt;
+      &lt;input type="submit" value="Book Room" /&gt;
+    &lt;/form&gt;
+  </code>
+  </pre> 
+  Optionally you can display extra field to show check in date &mp; check out date.
+  <pre>
+  <code class="html">
+    &lt;form method="GET" action="<span id="url"></span>"&gt;
+      &lt;label for="checkin" /&gt;
+      &lt;input type="date" name="checkin" /&gt;
+      &lt;label for="checkout" /&gt;
+      &lt;input type="date" name="checkout" /&gt;
+      &lt;input type="submit" value="Book Room" /&gt;
+    &lt;/form&gt;
+  </code>
+  </pre> 
+  See booking in action <br><br>
+  <form id="test-form" method="get" action="https://www.roompillow.com/b/roompillow-test">
+    <input type="submit" value="Book Room">
+  </form> 
+  <p> Open your website and the booking button should be shown and ready to receive booking.</p>
+</section>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+  let uid = new String(window.location).split("=")[1];
+  let url = "https://www.roompillow.com/b/" + uid;
+  document.getElementById("url").innerHTML = url;
+  document.getElementById("url2").innerHTML = url;
+  document.getElementById("test-form").action = url;
+</script>
+</body>
+</html>
