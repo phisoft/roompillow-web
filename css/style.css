@@ -1482,7 +1482,7 @@ input[type="text"] {
 }
 
 .colorlib-social-icons li a i {
-  font-size: 20px;
+  font-size: 24px;
 }
 
 .colorlib-heading {
@@ -1509,7 +1509,7 @@ input[type="text"] {
 }
 
 #colorlib-footer .colorlib-widget p {
-  font-size: 13px;
+  font-size: 14px;
 }
 
 @media screen and (max-width: 768px) {
@@ -1536,7 +1536,7 @@ input[type="text"] {
   margin: 0 0 10px 0;
   list-style: none;
   display: block;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 #colorlib-footer .colorlib-footer-links li a {
@@ -1560,7 +1560,7 @@ input[type="text"] {
 
 #colorlib-footer h4 {
   margin-bottom: 30px;
-  font-size: 12px;
+  font-size: 14px;
   color: #e6e6e6;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -1569,7 +1569,7 @@ input[type="text"] {
 
 #colorlib-footer .copy {
   background: #262626;
-  padding: 7em 0;
+  padding: 4em 0;
 }
 
 #colorlib-footer .copy p {
