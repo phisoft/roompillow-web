@@ -135,7 +135,7 @@ figure {
 }
 
 .colorlib-nav .top-menu {
-  padding: 30px 30px;
+  padding: 25px 25px;
 }
 
 @media screen and (max-width: 768px) {
@@ -188,16 +188,18 @@ figure {
 }
 
 .colorlib-nav ul li a {
+  font-size: 14px;
+  font-weight: 500;
   position: relative;
   padding: 20px 12px;
-  color: rgba(255, 255, 255, 0.9);
+  color: #2b2b22;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
 }
 
 .colorlib-nav ul li a:hover {
-  color: #fff;
+  color: #AC1806;
 }
 
 .colorlib-nav ul li.has-dropdown {
@@ -286,7 +288,7 @@ figure {
 }
 
 .colorlib-nav ul li.active>a {
-  color: rgba(255, 255, 255, 0.5);
+  color: #ac1806;
   position: relative;
 }
 
@@ -378,17 +380,17 @@ figure {
   top: 0;
   left: 0;
   right: 0;
-  background: #343939;
-  background: -moz-linear-gradient(-45deg, #343939 0%, #FAF9F6 100%);
+  background: #fff;
+  background: -moz-linear-gradient(-45deg, #343939 0%, #343939 100%);
   /* background: -webkit-gradient(left top, right bottom, color-stop(0%, #939697), color-stop(100%, #FAF9F6)); */
-  background: -webkit-linear-gradient(-45deg, #343939 0%, #FAF9F6 100%);
-  background: -o-linear-gradient(-45deg, #343939 0%, #FAF9F6 100%);
-  background: -ms-linear-gradient(-45deg, #343939 0%, #FAF9F6 100%);
-  background: -webkit-linear-gradient(315deg, #343939 0%, #FAF9F6 100%);
-  background: -o-linear-gradient(315deg, #343939 0%, #FAF9F6 100%);
-  background: linear-gradient(180deg, #343939 0%, #FAF9F6 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#343939', endColorstr='#FAF9F6', GradientType=1);
-  opacity: 0.5;
+  background: -webkit-linear-gradient(-45deg, #343939 0%, #343939 100%);
+  background: -o-linear-gradient(-45deg, #343939 0%, #343939 100%);
+  background: -ms-linear-gradient(-45deg, #343939 0%, #343939 100%);
+  background: -webkit-linear-gradient(315deg, #343939 0%, #343939 100%);
+  background: -o-linear-gradient(315deg, #343939 0%, #343939 100%);
+  background: linear-gradient(180deg, #343939 100%, #939697 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#343939', endColorstr='#939697', GradientType=1);
+  opacity: 0.96;
 }
 
 .video-hero .display-t {
@@ -427,10 +429,12 @@ figure {
 }
 
 .video-hero .display-tc h2 {
-  color: #fff;
-  font-size: 60px;
+  font-family: 'Nunito', sans-serif;
+  color: #333;
+  font-size: 58px;
   margin-bottom: 20px;
-  font-weight: 300;
+  font-weight: 900;
+  text-shadow: 0px 2px 4px #777;
 }
 
 @media screen and (max-width: 768px) {
@@ -440,10 +444,11 @@ figure {
 }
 
 .video-hero .display-tc p {
-  font-family: "Nunito", Arial, sans-serif;
-  color: #fff;
-  font-weight: 200;
+  font-family: "Nunito", sans-serif;
+  color: #2b2b2b;
+  font-weight: 500;
   font-size: 30px;
+  text-shadow: 0px 2px 4px #777;
 }
 
 .video-hero .display-tc p.breadcrumbs {
@@ -2275,4 +2280,15 @@ input[type="text"] {
 
 .slick-arrow.slick-hidden {
   display: none;
+}
+
+.roompillow-video {
+  z-index: 0;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
 }
