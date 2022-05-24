@@ -665,7 +665,15 @@ figure {
 
 .colorlib-work-featured .mobile-wrap .desc .features {
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 125px;
+}
+
+@media (max-width: 991px) {
+  .colorlib-work-featured .mobile-wrap .desc .features {
+    position: relative;
+    margin-bottom: 50px;
+  }
+
 }
 
 .colorlib-work-featured .mobile-wrap .desc .features .icon {
@@ -680,6 +688,7 @@ figure {
 }
 
 .colorlib-work-featured .mobile-wrap .desc .features .f-desc {
+
   padding-left: 50px;
 }
 
