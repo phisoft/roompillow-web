@@ -419,11 +419,10 @@
 						<div class="col-md-6 col-md-offset-3">
 							<div class="row">
 								<div class="col-md-12">
-									<form class="form-inline qbstp-header-subscribe" method="post"
-									action="https://formsubmit.co/hello@phisoft.my">
+									<form class="form-inline qbstp-header-subscribe" onsubmit="sendEmail(); reset(); return false;">
 										<div class="col-three-forth">
 											<div class="form-group">
-												<input type="text" class="form-control" id="email" name="email"
+												<input type="email" class="form-control demo-input" id="email" name="email"
 													placeholder="Enter your email">
 											</div>
 										</div>
@@ -527,6 +526,40 @@
 	<script src="js/jquery.countTo.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
+	<!-- SMPT EMAILAPI -->
+	<script src="https://smtpjs.com/v3/smtp.js"></script>
+	<script>
+		function sendEmail() {
+			if (validateForm()) {
+				Email.send({
+					Host: "smtp.elasticemail.com",
+					Username: "phisoft.marketing@gmail.com",
+					Password: "54C6C6E3B10D11FB45C043A9F15C1AFDCA0F",
+					To: 'hello@phisoft.my',
+					From: "phisoft.marketing@gmail.com",
+					Subject: "Roompillow Contact Form Submission",
+					Body:	"<br> Email: " + document.getElementById("email").value 
+				}).then(
+					message => alert("Message successfully sent.")
+				);
+			} else {
+				alert("Please fill in all required fields.");
+			}
+		}
+		function validateForm() {
+			var isValid = true;
+			var inputs = document.getElementsByClassName('demo-input');
+			for (var i = 0; i < inputs.length; i++) {
+				if (!inputs[i].value) {
+					isValid = false;
+					inputs[i].classList.add('is-invalid');
+				} else {
+					inputs[i].classList.remove('is-invalid');
+				}
+			}
+			return isValid;
+		}
+	</script>
 
 </body>
 
